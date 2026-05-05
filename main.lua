@@ -2675,16 +2675,16 @@ getgenv().Loaded = true
             Section:Label({Name = "Glow Effect"}):Colorpicker({Callback = function(color, alpha) Library:RefreshTheme("glow", color) end, Color = themes.preset.glow})
             Section:Label({Name = "Deselected Elements"}):Colorpicker({Callback = function(color, alpha) Library:RefreshTheme("deselected", color) end, Color = themes.preset.deselected})
 
-            window.Tweening = true
-            Section:Label({Name = "Menu Bind"}):Keybind({Name = "Menu Bind", Callback = function(bool) 
-                if window.Tweening then
-                    return 
-                end 
+window.Tweening = true
+Section:Label({Name = "Menu Bind"}):Keybind({Name = "Menu Bind", Callback = function(bool) 
+    if window.Tweening then
+        return 
+    end 
 
-                window.ToggleMenu(bool) 
-            end, Default = true})
+    window.ToggleMenu(bool) 
+end, Default = true, Key = Enum.KeyCode.RightShift, Mode = "Toggle"})
 
-            delay(2, function() window.Tweening = false end)
+delay(2, function() window.Tweening = false end)
         end
     --
 
