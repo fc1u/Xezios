@@ -1033,8 +1033,8 @@ getgenv().Loaded = true
     -- Library element functions
         function Library:Window(properties)
             local Cfg = {
-                Prefix = properties.Prefix or "Rivals Cheating Registry";
-                Suffix = properties.Suffix or "RCR";
+                Prefix = properties.Prefix or "Rivals Cheating History";
+                Suffix = properties.Suffix or "RCH";
                 Size = properties.Size or dim2(0, 620, 0, 471);
                 TabInfo;
                 Items = {};
